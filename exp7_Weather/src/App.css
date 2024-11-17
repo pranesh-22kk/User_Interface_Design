@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+.App {
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.App:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+  margin-bottom: 25px;
+  font-size: 30px;
+  color: #444;
+  font-weight: 600;
+}
+
+input {
+  padding: 14px;
+  width: 85%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  border: 1px solid #007bff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+button {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #0056b3, #004494);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 91, 187, 0.3);
+}
+
+.weather-data {
+  background-color: rgba(0, 123, 255, 0.1);
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 25px;
+  text-align: left;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.weather-data:hover {
+  background-color: rgba(0, 123, 255, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
+}
+
+.weather-data h2 {
+  font-size: 24px;
+  color: #333;
+  font-weight: 600;
+}
+
+.weather-data p {
+  font-size: 18px;
+  color: #555;
+  margin: 10px 0;
+}
+
+p.error {
+  color: red;
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .App {
+    padding: 25px;
+  }
+
+  input, button {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+}
+
+/* Additional animations */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.App {
+  animation: slideIn 1s ease-out;
+}
+
+button {
+  animation: pulse 1.5s infinite ease-in-out;
+}

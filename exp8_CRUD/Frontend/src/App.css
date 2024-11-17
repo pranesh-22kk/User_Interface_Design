@@ -1,0 +1,61 @@
+/* Global styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #1e3c72, #2a5298); /* New gradient with a more refined blue palette */
+  color: #fff; /* Set text color to white for better contrast */
+}
+
+/* Main app container */
+.App {
+  text-align: center;
+  padding: 4rem 2rem; /* Added more padding for better spacing */
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  background-color: rgba(0, 0, 0, 0.6); /* Darker, more consistent transparency */
+  padding: 1.2rem 2.5rem; /* Slightly increased padding for a balanced look */
+  border-radius: 30px; /* More rounded corners for a modern touch */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Softer shadow for depth */
+  transition: all 0.3s ease;
+}
+
+.navbar:hover {
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3); /* Hover effect for depth */
+  transform: translateY(-3px); /* Slight lift effect on hover */
+}
+
+/* Navbar links */
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.navbar a:hover {
+  color: #00c6ff; /* Bright cyan color on hover for contrast */
+  transform: scale(1.1); /* Slight scaling effect on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 1.5rem; /* Reduced padding for smaller screens */
+  }
+  
+  .navbar a {
+    font-size: 1.1rem; /* Slightly smaller font size for mobile */
+  }
+}
