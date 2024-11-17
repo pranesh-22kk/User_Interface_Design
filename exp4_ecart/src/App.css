@@ -1,0 +1,244 @@
+/* src/App.css */
+
+/* Global Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f9; /* Light background color for the whole app */
+}
+
+/* Basic Layout */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the app takes the full height of the screen */
+}
+
+/* Animation for smooth page transition */
+.App .page-enter, .App .page-exit {
+  opacity: 0;
+}
+
+.App .page-enter-active, .App .page-exit-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+/* Header Styling */
+.header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.header nav ul li {
+  margin-left: 20px;
+}
+
+.header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.header nav ul li a:hover {
+  color: #ff6347; /* Change color on hover */
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer nav ul li {
+  margin: 0 10px;
+}
+
+.footer nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer nav ul li a:hover {
+  color: #ff6347; /* Change color on hover */
+}
+
+/* Content Section Styling */
+.content {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  width: 80%;
+  max-width: 1200px;
+  border-radius: 8px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.content h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
+  border-radius: 8px;
+}
+
+/* Product List Section */
+.list {
+  padding: 50px 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  width: 80%;
+  max-width: 1200px;
+  border-radius: 8px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.search-bar:focus {
+  border-color: #ff6347; /* Change border color on focus */
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-card h2 {
+  font-size: 20px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.product-card:hover {
+  transform: translateY(-10px); /* Slight lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.product-card .btn {
+  background-color: #ff6347;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-card .btn:hover {
+  background-color: #ff4500; /* Darker shade of red on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header nav ul li {
+    margin: 10px 0;
+  }
+
+  .footer nav ul {
+    flex-direction: column;
+  }
+
+  .footer nav ul li {
+    margin: 5px 0;
+  }
+
+  .content, .list {
+    width: 95%;
+  }
+
+  .product-card {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+/* Keyframe for fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

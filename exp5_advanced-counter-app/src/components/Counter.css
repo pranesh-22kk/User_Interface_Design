@@ -1,0 +1,132 @@
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f3ec78, #af4261);  /* Gradient background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Counter Container */
+.counter {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 450px;
+    transition: transform 0.3s ease;
+}
+
+.counter:hover {
+    transform: translateY(-10px);
+}
+
+.counter h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Counter Buttons and Input */
+.counter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn.decrement {
+    background-color: #f44336;
+}
+
+.btn.reset {
+    background-color: #2196F3;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.input-box {
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+/* Step Value Input */
+.step-container {
+    margin-top: 20px;
+}
+
+.step-container label {
+    font-size: 16px;
+    color: #555;
+}
+
+.input-step {
+    width: 60px;
+    height: 35px;
+    text-align: center;
+    font-size: 16px;
+    margin-left: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    padding: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.input-step:focus {
+    border-color: #4CAF50;
+}
+
+/* History Section */
+.history {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.history h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.history ul {
+    list-style: none;
+    padding: 0;
+}
+
+.history li {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Limit Info */
+.limit-info {
+    margin-top: 10px;
+}

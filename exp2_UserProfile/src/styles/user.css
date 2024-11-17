@@ -1,0 +1,130 @@
+body {
+    background: linear-gradient(225deg, #FF3CAC, #784BA0 50%, #2B86C5);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.user-profile {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1.5s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.user-profile::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, #ff007f, #ffcc33, #00ccff, #66ff99);
+    z-index: -1;
+    background-size: 400%;
+    border-radius: 30px;
+    animation: gradientBorder 6s linear infinite;
+}
+
+.profile-picture-container {
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease;
+}
+
+.profile-picture-container:hover {
+    transform: scale(1.1) rotate(10deg);
+}
+
+.profile-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.user-name {
+    font-size: 2.5em;
+    margin: 0.5em 0;
+    color: transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background: linear-gradient(45deg, #ff0066, #ffcc33);
+    -webkit-background-clip: text;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease forwards;
+}
+
+.user-email, .user-bio, .user-phone, .user-address {
+    font-size: 1.1em;
+    margin: 0.5em 0;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease forwards;
+}
+
+.user-email { color: #b0b0b0; animation-delay: 0.5s; }
+.user-bio { font-style: italic; color: #a1a1a1; animation-delay: 1s; }
+.user-phone, .user-address { color: #eaeaea; animation-delay: 1.5s; }
+
+.social-media-links {
+    margin-top: 1.5em;
+}
+
+.social-media-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-media-links li {
+    margin: 0;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-media-links a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.social-media-links a:hover {
+    color: #ff0066;
+    filter: brightness(1.3);
+    transform: translateY(-5px);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradientBorder {
+    from { background-position: 0% 50%; }
+    to { background-position: 100% 50%; }
+}

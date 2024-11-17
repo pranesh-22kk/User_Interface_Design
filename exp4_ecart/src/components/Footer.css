@@ -1,0 +1,60 @@
+/* src/components/Footer.css */
+
+/* Footer container styling */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 20px;
+    text-align: center;
+    margin-top: auto;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Footer navigation list */
+  .footer nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  /* Footer list item styling */
+  .footer nav ul li {
+    margin: 0 15px;
+  }
+  
+  /* Footer link styling */
+  .footer nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer nav ul li a:hover {
+    color: #ff6347; /* Hover effect for links */
+  }
+  
+  /* Footer text */
+  .footer p {
+    font-size: 14px;
+    color: #ccc;
+    margin-top: 20px;
+    font-style: italic;
+  }
+  
+  /* Mobile responsiveness: Stack footer links vertically */
+  @media (max-width: 768px) {
+    .footer nav ul {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
+    }
+  
+    .footer nav ul li {
+      margin: 10px 0;
+    }
+  }
+  

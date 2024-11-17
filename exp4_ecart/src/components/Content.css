@@ -1,0 +1,56 @@
+/* src/components/Content.css */
+
+/* Content section styling */
+.content {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1200px;
+    border-radius: 8px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Heading styling */
+  .content h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  /* Paragraph styling */
+  .content p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  /* Image styling */
+  .hero-image {
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    animation: fadeIn 2s ease-in-out; /* Animation for image */
+  }
+  
+  /* Mobile responsiveness: Adjust content size on smaller screens */
+  @media (max-width: 768px) {
+    .content {
+      width: 95%;
+      padding: 30px 15px;
+    }
+  
+    .content h1 {
+      font-size: 28px;
+    }
+  
+    .content p {
+      font-size: 16px;
+    }
+  }
+  

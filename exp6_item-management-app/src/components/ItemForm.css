@@ -1,0 +1,162 @@
+/* Body Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif; /* Consistent font across the application */
+    background: linear-gradient(135deg, #f3e5f5, #e1bee7); /* Gradient background */
+    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+/* Container Styles */
+.form-container {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Gradient background */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 90%; /* Responsive width */
+    margin: 20px auto;
+    color: #333;
+}
+
+/* Form Heading */
+h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 32px; /* Increased font size */
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 30px; /* Increased spacing */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px; /* Larger label font size */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px; /* Increased padding */
+    font-size: 18px; /* Increased input font size */
+    border-radius: 15px; /* More rounded corners */
+    border: 1px solid #ddd;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #4caf50; /* Focus color */
+    outline: none;
+}
+
+/* Button Styles */
+.submit-button {
+    display: inline-block;
+    background-color: #4caf50; /* Green button color */
+    color: #fff;
+    padding: 15px 30px; /* Increased padding */
+    border: none;
+    border-radius: 25px;
+    font-size: 18px; /* Increased button font size */
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.submit-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05);
+}
+
+.submit-button:active {
+    background-color: #3e8e41; /* Even darker green when active */
+}
+
+/* Error Message */
+.error-message {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Item List */
+.item-list {
+    margin-top: 30px;
+    background: #fff;
+    padding: 30px; /* Increased padding */
+    border-radius: 20px; /* More rounded corners */
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.item-list h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 24px; /* Increased item list heading size */
+}
+
+.item-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.item-list li {
+    padding: 12px; /* Increased padding for items */
+    border-bottom: 1px solid #ddd;
+    font-size: 18px; /* Increased item font size */
+}
+
+.item-list li:last-child {
+    border-bottom: none;
+}
+
+.item-list strong {
+    color: #4caf50; /* Green color for item names */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 30px; /* Adjust padding for smaller screens */
+    }
+
+    h2 {
+        font-size: 28px; /* Adjust heading font size */
+    }
+
+    .form-group label {
+        font-size: 16px; /* Adjust label font size */
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 16px; /* Adjust input font size */
+    }
+
+    .submit-button {
+        padding: 12px 25px; /* Adjust button padding */
+        font-size: 16px; /* Adjust button font size */
+    }
+
+    .item-list h3 {
+        font-size: 20px; /* Adjust item list heading size */
+    }
+
+    .item-list li {
+        font-size: 16px; /* Adjust item font size */
+    }
+}

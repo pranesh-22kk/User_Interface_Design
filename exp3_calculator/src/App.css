@@ -1,0 +1,156 @@
+/* General body styling with background image */
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, rgba(115, 165, 255, 0.7), rgba(84, 119, 245, 0.7)), 
+              url('C:\Users\Pranesh\UID\LAB\react-calculator\public\calculator1.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+/* Calculator Container */
+.calculator {
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(10px); /* Glass effect */
+  transition: all 0.3s ease-in-out;
+}
+
+.calculator:hover {
+  transform: scale(1.02); /* Slight zoom on hover */
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Display Styling */
+.display {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.input {
+  width: 100%;
+  height: 70px;
+  font-size: 2.2rem;
+  padding: 15px;
+  text-align: right;
+  border-radius: 15px;
+  border: none;
+  background: rgba(240, 240, 240, 0.8);
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Keypad Styling */
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  width: 100%;
+}
+
+button {
+  background: linear-gradient(135deg, #73a5ff, #5477f5);
+  color: white;
+  font-size: 1.6rem;
+  padding: 20px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #5477f5, #73a5ff);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Operator button styling */
+button.operator {
+  background: linear-gradient(135deg, #ff7a7a, #ff4c4c);
+}
+
+button.clear {
+  background: linear-gradient(135deg, #ff9e7a, #ff7a7a);
+}
+
+button.equals {
+  background: linear-gradient(135deg, #7aff7a, #4cff4c);
+  grid-column: span 2;
+}
+
+/* Dot button */
+button.dot {
+  background: linear-gradient(135deg, #7affff, #4cffff);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .calculator {
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .input {
+    font-size: 1.8rem;
+    height: 60px;
+  }
+
+  button {
+    font-size: 1.4rem;
+    padding: 15px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .calculator {
+    width: 90%;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .input {
+    font-size: 1.5rem;
+    height: 50px;
+  }
+
+  button {
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 8px;
+  }
+}
+
+/* Modern style for the calculator title */
+h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #73a5ff, #5477f5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+/* Optional hover effect for the title */
+h2:hover {
+  transform: scale(1.05);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
