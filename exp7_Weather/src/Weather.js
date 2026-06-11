@@ -21,7 +21,7 @@ const Weather = () => {
         } else if (response.status === 401) {
           throw new Error('Invalid API key');
         } else {
-          throw new Error('Something went wrong');
+          throw new Error('Something went wrong!!');
         }
       }
 
@@ -59,7 +59,7 @@ const Weather = () => {
       {error && <p className="error">{error}</p>}
 
       {weatherData && (
-        <div className="weather-data">
+        <div className="weather--data">
           <h2>{weatherData.name}</h2>
           <p>Temperature: {weatherData.main.temp}°C</p>
           <p>Weather: {weatherData.weather[0].description}</p>
